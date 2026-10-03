@@ -1,0 +1,17 @@
+name: Runner
+on: workflow_dispatch
+
+jobs:
+  debug:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH Debug Session
+        uses: lexbritvin/ssh-session-action@v1
+        with:
+          use-bore: 'true'
+          bore-server: ${{ secrets.BORE_SERVER }}
+          bore-secret: ${{ secrets.BORE_SECRET }}
+          ssh-server-authorized-keys: ${{ secrets.SSH_PUBLIC_KEYS }}
+          wait-timeout: 900
