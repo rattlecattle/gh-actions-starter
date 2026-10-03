@@ -11,6 +11,8 @@ jobs:
 
       - name: Setup SSH Debug Session
         uses: lexbritvin/ssh-session-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           use-bore: 'true'
           bore-server: ${{ secrets.BORE_SERVER }}
