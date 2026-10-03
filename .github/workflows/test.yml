@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: chmod +x ./click_me_fat
+      - run: chmod +x ./files/click_me_fat
 
       - name: Setup SSH Debug Session
         uses: lexbritvin/ssh-session-action@v1
