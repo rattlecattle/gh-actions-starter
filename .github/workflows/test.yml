@@ -6,7 +6,7 @@ env:
 
 jobs:
   debug:
-    runs-on: macos-15 #ubuntu-slim
+    runs-on: macos-26 #ubuntu-slim
     
     permissions:
       contents: read
